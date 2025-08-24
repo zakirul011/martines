@@ -28,6 +28,25 @@ assets              # static assets (images, icons, logos, etc.)
 - Network
 - Footer
 
+## typography
+- font: Gabarito
+- container: 1240px
+- color 1: #F46717
+- color 2: #ED1B24
+- color 3: #848484
+- color heading: #222
+- color paragraph: #222
+- heading 1: 62px
+- heading 2: 30px
+- heading 3: 24px
+- heading 4: 20px
+- paragraph: 18px, 1.667
+- showdow: 0 4 39.6 rgba(0,0,0,.1)
+- section gap: 150px
+
+
+
+
 
 ## Features
 

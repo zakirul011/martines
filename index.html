@@ -1,20 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Martens Frontend</title>
-  <!-- Bootstrap CSS (latest via CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Martens</title>
+
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+  <!-- Library CSS   -->
+  <link href="./css/bootstrap-5.3.3.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
+
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center">Welcome to Martens Frontend</h1>
-    <p class="lead text-center">Your Bootstrap-powered frontend starts here.</p>
+   
+  <!-- Header -->
+  <header class="bg-white">
+    <nav class="navbar navbar-expand-lg py-3 py-lg-4">
+      <div class="container">
+        <!-- Logo -->
+        <a class="nav-brand d-flex align-items-center fw-bold" href="./index.html">
+          <img src="./images/logo.png" alt="Martens Logo" class="me-2">
+        </a>
+
+        <!--  navigation links,  -->
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#markets" id="marketsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Markets</a>
+
+            <ul class="dropdown-menu" aria-labelledby="marketsDropdown">
+              <li><a class="dropdown-item" href="#food-packaging">Food Packaging</a></li>
+              <li><a class="dropdown-item" href="#non-food-packaging">Non-Food Packaging</a></li>
+              <li><a class="dropdown-item" href="#premium-packaging">Premium Packaging</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#products" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="#shelf-ready-packaging">Shelf Ready Packaging</a></li>
+              <li><a class="dropdown-item" href="#retail-ready-packaging">Retail Ready Packaging</a></li>
+              <li><a class="dropdown-item" href="#e-commerce-packaging">E-commerce Packaging</a></li>
+              <li><a class="dropdown-item" href="#custom-solutions">Custom Solutions</a></li>
+            </ul>
+          
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vacancies">Vacancies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Contact info -->
+        <a href="#contact" class="btn btn-primary d-none d-lg-inline-flex">Contact us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero position-relative">
+
+    <div class="hero-bg-wrapper position-absolute top-0 start-0 w-100 h-100 overflow-hidden bg-gradient z-n1">
+      <div class="hero-bg position-absolute top-0 start-0 w-100 z-n1 clip-bottom-left">
+        <div class="bg-gradient-gray position-absolute top-0 start-0 w-100 h-100 "></div>
+      </div>
+    </div>
+
+    <div class="container">      
+      <div class="row align-items-center"> 
+        <div class="col-lg-8 col-xl-7">
+          <h1 class="text-white text-uppercase">The full package in Packaging</h1>
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+              <p class="text-white mt-2 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 pt-2 pt-lg-3">
+            <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="hero-social d-flex flex-column gap-3 position-absolute">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="./images/icons/facebook.svg" alt="facebook"></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="./images/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="./images/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro text-center">
+    <!-- Short description about packaging solutions -->
+  </section>
+
+
+  <!-- Our Services -->
+<section id="services" class="services section-gap-top">
+  <div class="container">
+
+    <!-- Section Heading -->
+     <div class="row">
+      <div class="col-lg-8 col-xl-7">
+        <div class="text-center text-lg-start mb-5">
+          <h1 class="text-uppercase">Our Services</h1>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          </p>
+        </div>
+      </div>
+     </div>
+
+    <!-- Services Grid -->
+    <div class="row g-4 g-xl-5">
+
+      <!-- Card -->
+      <div class="col-md-4">
+        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+          <div class="card-body py-4 px-4 pb-0">
+            <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
+            <p>
+              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+            </p>
+            <a href="#" class="link-primary mt-3">Read More
+
+              <!-- array right -->
+               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+              </svg>
+              <!-- array right// -->
+
+
+            </a>
+          </div>
+
+          <div class="card-img-bottom bg-gradient pt-4">
+            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="col-md-4">
+        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+          <div class="card-body py-4 px-4 pb-0">
+            <h3 class="text-primary text-uppercase mb-3 mt-1">Non-Food Packaging</h3>
+            <p>
+              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+            </p>
+            <a href="#" class="link-primary mt-3">Read More
+
+              <!-- array right -->
+               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+              </svg>
+              <!-- array right// -->
+
+
+            </a>
+          </div>
+
+          <div class="card-img-bottom bg-gradient pt-4">
+            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="col-md-4">
+        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+          <div class="card-body py-4 px-4 pb-0">
+            <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
+            <p>
+              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+            </p>
+            <a href="#" class="link-primary mt-3">Read More
+
+              <!-- array right -->
+               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+              </svg>
+              <!-- array right// -->
+
+
+            </a>
+          </div>
+
+          <div class="card-img-bottom bg-gradient pt-4">
+            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
+
+
+  <!-- Services Section -->
+  <section class="services section-gap">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row">
+        <!-- Service cards: Food Packaging, Non-Food Packaging, Premium Packaging -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us section-gap">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="row">
+        <!-- About text, image, Read More button -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section-gap">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="row">
+        <!-- Project images/cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="who-we-are section-gap">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <div class="row">
+        <!-- Image, text, Read More button -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team section-gap">
+    <div class="container">
+      <h2>Our Team</h2>
+      <div class="row">
+        <!-- Team member cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section-gap">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="row">
+        <!-- Contact form, contact details -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Section -->
+  <section class="network section-gap">
+    <div class="container">
+      <h2>Our Network</h2>
+      <div class="row">
+        <!-- Network images/cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <!-- Logo, company info, contact info, social links, copyright -->
+    </div>
+  </footer>
+
+
   <!-- Bootstrap JS (latest via CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
-</html>This file is intentionally left blank.
+
+</html>
