@@ -11,7 +11,7 @@ css
 js
 └── main.js         # JavaScript code for interactivity
 assets              # static assets (images, icons, logos, etc.)
-└── README.md               # Project documentation
+└── README.md       # Project documentation
 
 ```
 
