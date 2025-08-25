@@ -14,12 +14,25 @@
     --bs-gradient: linear-gradient(-90deg, var(--primary-color), var(--secondary-color));
     --bs-primary: var(--primary-color);
     --bs-primary-rgb: 237, 27, 36;
-    --bs-box-shadow-sm: 0 .25rem 2.5rem rgba(0,0,0,.1)
+    --bs-box-shadow-sm: 0 .25rem 2.5rem rgba(0,0,0,.1);
+    --bs-light: #f5f5f5;
+    --bs-light-rgb: 245, 245, 245;
 }
 
 body {
     font-family: var(--font-family);    
     color: var(--text-color);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px) {    
+    .container, .container-lg, .container-md, .container-sm{
+        max-width: 990px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -40,13 +53,23 @@ h1 {
         font-size: 3.875rem;  /* 62px */
     }
 }
+h3 {
+    font-size: calc(1.3rem + .5vw);
+}
+@media (min-width: 1200px) {
+    h3 {
+        font-size: 1.875rem;  /* 30px */
+    }
+}
 
 p{
     line-height: 1.667;
+    font-size: 1.0625rem;
 }
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 button,a{
     transition: all .3s ease;
@@ -62,6 +85,12 @@ button,a{
 .link-primary:hover svg{
     transform: translateX(.25rem);
 }
+.bg-gray{
+    background-color: var(--gray-color);
+}
+.text-gray{
+    color: var(--gray-color);
+}
 
 .clip-bottom-left{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
@@ -69,13 +98,67 @@ button,a{
 .bg-gradient-gray{
     background-image: var(--gradient-gray);
 }
+
+p.fs-2 {
+    font-size: 1.2rem !important;
+}
+@media (min-width: 1200px) {
+    p.fs-2 {
+        font-size: 2rem !important;
+    }
+}
+
+
+
+/* section gap */
 .section-gap-top,
 .section-gap{
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 .section-gap-bottom,
 .section-gap{
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .section-gap-top,
+    .section-gap{
+        padding-top: 8rem;
+    }
+    .section-gap-bottom,
+    .section-gap{
+        padding-bottom: 8rem;
+    }
+
+}@media (min-width: 1200px) {
+    .section-gap-top,
+    .section-gap{
+        padding-top: 10rem;
+    }
+    .section-gap-bottom,
+    .section-gap{
+        padding-bottom: 10rem;
+    }
+}
+
+
+.section-gap-sm-top,
+.section-gap-sm{
+    padding-top: 5rem;
+}
+.section-gap-sm-bottom,
+.section-gap-sm{
+    padding-bottom: 5rem;
+}
+@media (min-width: 1200px) {
+    .section-gap-sm-top,
+    .section-gap-sm{
+        padding-top: 7.5rem;
+    }
+    .section-gap-sm-bottom,
+    .section-gap-sm{
+        padding-bottom: 7.5rem;
+    }
 }
 
 
@@ -103,16 +186,29 @@ button,a{
 }
 
 
+
+
 /* header section */
+.nav-brand img{
+    width: calc(5rem + 3.22vw);
+}
 .navbar {
-    --bs-navbar-nav-link-padding-x: 1rem;
+    --bs-navbar-nav-link-padding-x: .75rem;
     --bs-navbar-hover-color: var(--primary-color);
     --bs-navbar-active-color: var(--primary-color);
 }
 .navbar-nav{
-    --bs-nav-link-font-size: 1.125rem;
+    --bs-nav-link-font-size: 1rem;
     --bs-nav-link-font-weight: 500;
     --bs-nav-link-color: var(--text-color);
+}
+@media (min-width: 1200px) {
+    .navbar-nav{
+        --bs-nav-link-font-size: 1.125rem;
+    }
+    .navbar {
+        --bs-navbar-nav-link-padding-x: 1rem;
+    }
 }
 .nav-link:focus-visible {
     box-shadow: none;
@@ -124,7 +220,7 @@ button,a{
 /* dropdown */
 .dropdown-toggle::after {
     border: none;
-    background: url(./../images/icon/arrow-down.svg) no-repeat center center/contain;
+    background: url(./../images/icons/arrow-down.svg) no-repeat center center/contain;
     width: .75rem;
     height: .625rem;
     vertical-align: middle;
@@ -162,11 +258,6 @@ button,a{
 
 
 /* Social Links */
-.social {
-  bottom: 5rem;
-  right: 2.5rem;
-  z-index: 3;
-}
 
 .social a {
   width: 3.25em;
@@ -180,7 +271,24 @@ button,a{
   transition: all 0.3s ease;
   position: relative;
 }
-.social a::after {
+.social a:hover {
+  background: var(--secondary-color);
+}
+.social a img {
+    max-width: 2em;
+    max-height: 1.8em;
+}
+.social-sm a {
+    font-size: 0.6rem;
+}
+
+
+.hero .social {
+    bottom: 5rem;
+    right: 2.5rem;
+    z-index: 3;
+}
+.hero .social a::after {
     content: '';
     height: 3px;
     width: 2.5rem;
@@ -189,13 +297,6 @@ button,a{
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-}
-.social a:hover {
-  background: var(--secondary-color);
-}
-.social a img {
-    max-width: 2em;
-    max-height: 1.8em;
 }
 
 
@@ -216,4 +317,111 @@ button,a{
 }
 .service__card .card-img-overlay{
     background-image: linear-gradient(-45deg, var(--primary-color) 0%, transparent 25%);    
+}
+
+
+/* About section */
+.about__img{
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);   
+    width: 55%;    
+}
+.about__img img{
+    clip-path: polygon(37% 0, 100% 0, 100% 100%, 0 100%);   
+}
+
+/* Projects section */
+.projects {
+    --swiper-navigation-size: 1rem;
+    --swiper-navigation-color: var(--text-color);
+    --swiper-pagination-color: var(--bs-white);
+    --swiper-pagination-bullet-width: 0.75rem;
+    --swiper-pagination-bullet-height: 0.75rem;
+    --swiper-pagination-bullet-inactive-color: var(--bs-white);
+    --swiper-pagination-bullet-inactive-opacity: 0.3;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+     --swiper-pagination-bottom: 1.5rem;
+}
+.projects__slider{
+    padding: 3rem 0;
+}
+@media (min-width: 1200px) {
+    .projects__slider{
+        padding: 6rem 0;
+    }
+}
+.projects__slider-bg{
+    width: var(--container-width);
+}
+
+.projects .swiper-button-next, 
+.projects .swiper-button-prev{
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.projects .swiper-button-next:hover, 
+.projects .swiper-button-prev:hover{
+    border-color: var(--primary-color);
+}
+
+
+
+/* who-we-are section */
+.who-we-are__img{
+    clip-path: polygon(0 0, calc(100% - 33%) 0, 100% 100%, 0 100%);   
+    width: 55%;    
+}
+.who-we-are__img img{
+    clip-path: polygon(0 0, calc(100% - 37%) 0, 100% 100%, 0 100%);   
+}
+
+
+/* Team section */
+.team__card .card-body {
+    padding: 1.25rem;
+    clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 2.5rem;
+}
+
+.team__card-bg {
+    clip-path: polygon(0 45%, 100% 1.25rem, 100% 100%, 0% 100%);
+}
+.team__bg{
+    height: 72%;
+}
+
+
+/* Contact section */
+.form-control {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    transition: .3s ease;
+    border-color: var(--text-color);
+    padding: 1em 1em;
+    line-height: 1.4;
+    border-radius: 0;
+}
+.form-control:focus {
+    box-shadow: 0 0 0.5rem  rgba(0,0,0,.05);
+    border-color: var(--primary-color);
+}
+
+.contact__box {
+    --bs-card-spacer-x: 3.75rem;
+    --bs-card-spacer-y: 3.75rem;
+    border: 0;
+    border-radius: 0;
+}
+.contact__text {
+    padding: 2.5rem 2rem;
+}
+.contact__logo {
+    opacity: .15;
+    width: 20%;
 }
