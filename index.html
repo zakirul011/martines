@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Martens</title>
 
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
   <!-- Library CSS   -->
   <link href="./css/bootstrap-5.3.3.min.css" rel="stylesheet">
@@ -67,8 +67,8 @@
   <!-- Hero Section -->
   <section class="hero position-relative">
 
-    <div class="hero-bg-wrapper position-absolute top-0 start-0 w-100 h-100 overflow-hidden bg-gradient z-n1">
-      <div class="hero-bg position-absolute top-0 start-0 w-100 z-n1 clip-bottom-left">
+    <div class="hero__bg-wrapper position-absolute top-0 start-0 w-100 h-100 overflow-hidden bg-gradient z-n1">
+      <div class="hero__bg position-absolute top-0 start-0 w-100 z-n1 clip-bottom-left">
         <div class="bg-gradient-gray position-absolute top-0 start-0 w-100 h-100 "></div>
       </div>
     </div>
@@ -92,7 +92,7 @@
     </div>
 
     <!-- Social Links -->
-    <div class="hero-social d-flex flex-column gap-3 position-absolute">
+    <div class="social d-flex flex-column gap-3 position-absolute">
       <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="./images/icons/facebook.svg" alt="facebook"></a>
       <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="./images/icons/instagram.svg" alt="Instagram"></a>
       <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="./images/icons/twitter.svg" alt="Twitter"></a>
@@ -101,120 +101,129 @@
   </section>
 
   <!-- Intro Section -->
-  <section class="intro text-center">
-    <!-- Short description about packaging solutions -->
+  <section class="intro section-gap-top">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="intro__content text-center position-relative">
+            <img src="./images/logo-icon.png" alt="Logo" class="intro__logo position-absolute top-50 start-50 translate-middle">
+            <p class="fs-2 lh-lg">We manufacture high-quality cardboard packaging solutions that are durable, eco-friendly, and tailored to your business needs. Reliable service and timely delivery are our promise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
   <!-- Our Services -->
-<section id="services" class="services section-gap-top">
-  <div class="container">
+  <section id="services" class="services section-gap-top">
+    <div class="container">
 
-    <!-- Section Heading -->
-     <div class="row">
-      <div class="col-lg-8 col-xl-7">
-        <div class="text-center text-lg-start mb-5">
-          <h1 class="text-uppercase">Our Services</h1>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-          </p>
-        </div>
-      </div>
-     </div>
-
-    <!-- Services Grid -->
-    <div class="row g-4 g-xl-5">
-
-      <!-- Card -->
-      <div class="col-md-4">
-        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
-          <div class="card-body py-4 px-4 pb-0">
-            <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
+      <!-- Section Heading -->
+      <div class="row">
+        <div class="col-lg-8 col-xl-7">
+          <div class="text-center text-lg-start mb-5">
+            <h1 class="text-uppercase">Our Services</h1>
             <p>
-              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
             </p>
-            <a href="#" class="link-primary mt-3">Read More
-
-              <!-- array right -->
-               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
-              </svg>
-              <!-- array right// -->
-
-
-            </a>
           </div>
-
-          <div class="card-img-bottom bg-gradient pt-4">
-            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
-            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
-            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
-          </div>
-
         </div>
       </div>
 
-      <!-- Card -->
-      <div class="col-md-4">
-        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
-          <div class="card-body py-4 px-4 pb-0">
-            <h3 class="text-primary text-uppercase mb-3 mt-1">Non-Food Packaging</h3>
-            <p>
-              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
-            </p>
-            <a href="#" class="link-primary mt-3">Read More
+      <!-- Services Grid -->
+      <div class="row g-4 g-xl-5">
 
-              <!-- array right -->
-               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
-              </svg>
-              <!-- array right// -->
+        <!-- Card -->
+        <div class="col-md-4">
+          <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+            <div class="card-body py-4 px-4 pb-0">
+              <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
+              <p>
+                We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+              </p>
+              <a href="#" class="link-primary mt-3">Read More
+
+                <!-- array right -->
+                <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+                </svg>
+                <!-- array right// -->
 
 
-            </a>
+              </a>
+            </div>
+
+            <div class="card-img-bottom bg-gradient pt-4">
+              <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+              <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+              <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+            </div>
+
           </div>
-
-          <div class="card-img-bottom bg-gradient pt-4">
-            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
-            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
-            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
-          </div>
-
         </div>
-      </div>
 
-      <!-- Card -->
-      <div class="col-md-4">
-        <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
-          <div class="card-body py-4 px-4 pb-0">
-            <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
-            <p>
-              We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
-            </p>
-            <a href="#" class="link-primary mt-3">Read More
+        <!-- Card -->
+        <div class="col-md-4">
+          <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+            <div class="card-body py-4 px-4 pb-0">
+              <h3 class="text-primary text-uppercase mb-3 mt-1">Non-Food Packaging</h3>
+              <p>
+                We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+              </p>
+              <a href="#" class="link-primary mt-3">Read More
 
-              <!-- array right -->
-               <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
-              </svg>
-              <!-- array right// -->
+                <!-- array right -->
+                <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+                </svg>
+                <!-- array right// -->
 
 
-            </a>
+              </a>
+            </div>
+
+            <div class="card-img-bottom bg-gradient pt-4">
+              <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+              <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+              <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+            </div>
+
           </div>
-
-          <div class="card-img-bottom bg-gradient pt-4">
-            <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
-            <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
-            <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
-          </div>
-
         </div>
-      </div>
 
+        <!-- Card -->
+        <div class="col-md-4">
+          <div class="service__card card shadow-sm bg-white border-0 rounded-0 h-100">
+            <div class="card-body py-4 px-4 pb-0">
+              <h3 class="text-primary text-uppercase mb-3 mt-1">Food Packaging</h3>
+              <p>
+                We provide safe, hygienic, and eco-friendly cardboard packaging solutions specially designed for food products, ensuring freshness and compliance with industry standards.
+              </p>
+              <a href="#" class="link-primary mt-3">Read More
+
+                <!-- array right -->
+                <svg class="ms-1" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.249927 5.00009C0.249927 4.80118 0.328945 4.61041 0.469598 4.46976C0.61025 4.32911 0.801015 4.25009 0.999927 4.25009L11.1899 4.25009L8.46993 1.53009C8.33745 1.38792 8.26532 1.19987 8.26875 1.00557C8.27218 0.811267 8.35089 0.625882 8.48831 0.488469C8.62572 0.351056 8.8111 0.272344 9.0054 0.268915C9.19971 0.265487 9.38775 0.33761 9.52993 0.47009L13.5299 4.47009C13.6704 4.61072 13.7493 4.80134 13.7493 5.00009C13.7493 5.19884 13.6704 5.38946 13.5299 5.53009L9.52993 9.53009C9.38775 9.66257 9.19971 9.73469 9.0054 9.73127C8.8111 9.72784 8.62572 9.64912 8.48831 9.51171C8.35089 9.3743 8.27218 9.18891 8.26875 8.99461C8.26532 8.80031 8.33745 8.61227 8.46993 8.47009L11.1899 5.75009L0.999927 5.75009C0.801015 5.75009 0.61025 5.67107 0.469598 5.53042C0.328945 5.38977 0.249927 5.199 0.249927 5.00009Z" fill="var(--primary-color)"/>
+                </svg>
+                <!-- array right// -->
+
+
+              </a>
+            </div>
+
+            <div class="card-img-bottom bg-gradient pt-4">
+              <img src="./images/service/food.jpg" class="card-img rounded-0 img-fluid" alt="Food Packaging">
+              <div class="card-img-overlay position-absolute bottom-0 end-0 h-100 w-100 opacity-75"></div>
+              <img src="./images/service/food-icon.svg" class="position-absolute bottom-0 end-0 m-3" alt="Food Icon">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Services Section -->

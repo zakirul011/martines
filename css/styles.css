@@ -145,30 +145,30 @@ button,a{
     padding-top: calc(5rem + 6.25vw);
     padding-bottom: calc(7rem + 13vw);
 }
-.hero-bg {
+.hero__bg {
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
     bottom: 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
 }
-.hero-bg-wrapper {
+.hero__bg-wrapper {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 84.5%);
 }
 
 @media (min-width: 992px){
-    .hero-bg {
+    .hero__bg {
         bottom: 3rem;
     }    
 }
 
 
-/* Hero Social Links */
-.hero-social {
+/* Social Links */
+.social {
   bottom: 5rem;
   right: 2.5rem;
   z-index: 3;
 }
 
-.hero-social a {
+.social a {
   width: 3.25em;
   height: 3.25em;
   display: flex;
@@ -180,7 +180,7 @@ button,a{
   transition: all 0.3s ease;
   position: relative;
 }
-.hero-social a::after {
+.social a::after {
     content: '';
     height: 3px;
     width: 2.5rem;
@@ -190,14 +190,20 @@ button,a{
     top: 50%;
     transform: translateY(-50%);
 }
-.hero-social a:hover {
+.social a:hover {
   background: var(--secondary-color);
 }
-.hero-social a img {
+.social a img {
     max-width: 2em;
     max-height: 1.8em;
 }
 
+
+/* Intro section */
+.intro__logo{
+    opacity: .1;
+    width: 30%;
+}
 
 
 /* Service area */
