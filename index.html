@@ -9,17 +9,157 @@
 
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
-  <!-- Library CSS   -->
+  <!-- bootstrap CSS   -->
   <link href="./css/bootstrap-5.3.3.min.css" rel="stylesheet">
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 
 <body>
+
+  
+  <!-- ===== Mobile Menu Start ===== -->
+  <div class="menu d-lg-none">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+          <div class="offcanvas-header align-items-center justify-content-between">
+              <div class="offcanvas-title menu__logo" id="offcanvasLeftLabel">
+                  <a href="index.html">
+                      <img src="./images/logo.png" alt="logo image">
+                  </a>
+              </div>
+              <button type="button" class="btn p-0 border-0" data-bs-dismiss="offcanvas"
+                  aria-label="Close">
+                 
+                  <img src="./images/icons/close.png" alt="close" width="25px">
+              </button>
+          </div>
+          <div class="offcanvas-body p-0">
+              <nav class="menu__nav">
+                  <ul class="menu__ul text-capitalize">
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link active d-flex align-items-center justify-content-between">
+                              home
+                          </a>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a class="menu__link d-flex align-items-center justify-content-between"
+                              data-bs-toggle="collapse" href="#menu__collapse" role="button" aria-expanded="false"
+                              aria-controls="menu__collapse">
+                              Markets
+
+                              <i class="submenu-icon far fa-chevron-down transition"></i>
+                              
+                              <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                                <path d="M3.67776 6.81355C4.07544 7.38756 4.92407 7.38756 5.32175 6.81355L8.60853 2.06949C9.06801 1.40629 8.59335 0.5 7.78653 0.5H1.21298C0.406156 0.5 -0.0684982 1.40629 0.390981 2.06949L3.67776 6.81355Z" fill="#222222"/>
+                              </svg>
+                          </a>
+
+                          <div class="collapse submenu" id="menu__collapse">
+                              <nav class="submenu__nav">
+                                  <ul class="submenu__ul">
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                              food Packaging
+                                          </a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                              Non-Food Packaging
+                                          </a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                              Premium Packaging
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </nav>
+                          </div>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a class="menu__link d-flex align-items-center justify-content-between"
+                              data-bs-toggle="collapse" href="#menu__collapse2" role="button" aria-expanded="false"
+                              aria-controls="menu__collapse">
+                              Products
+
+                              <i class="submenu-icon far fa-chevron-down transition"></i>
+                              
+                            <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                              <path d="M3.67776 6.81355C4.07544 7.38756 4.92407 7.38756 5.32175 6.81355L8.60853 2.06949C9.06801 1.40629 8.59335 0.5 7.78653 0.5H1.21298C0.406156 0.5 -0.0684982 1.40629 0.390981 2.06949L3.67776 6.81355Z" fill="#222222"/>
+                            </svg>
+                          </a>
+
+                          <div class="collapse submenu" id="menu__collapse2">
+                              <nav class="submenu__nav">
+                                  <ul class="submenu__ul">
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                              Shelf Ready Packaging
+                                          </a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                             Retail Ready Packaging
+                                          </a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                              E-commerce Packaging
+                                          </a>
+                                      </li>
+                                      <li class="submenu__item">
+                                          <a href="#" class="submenu__link fw-medium d-flex align-items-center gap-2">
+                                              <i class="submenu__icon far fa-chevron-up transition"></i>
+                                             Custom Solutions
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </nav>
+                          </div>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link d-flex align-items-center justify-content-between">
+                              Services
+                          </a>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link d-flex align-items-center justify-content-between">
+                              About Us
+                          </a>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link d-flex align-items-center justify-content-between">
+                              News
+                          </a>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link d-flex align-items-center justify-content-between">
+                              Vacancies
+                          </a>
+                      </li>
+                      <li class="menu__nav__item">
+                          <a href="#" class="menu__link d-flex align-items-center justify-content-between">
+                              Contact
+                          </a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </div>
+  <!-- ===== Mobile Menu End ===== -->
    
   <!-- Header -->
   <header class="bg-white">
@@ -31,31 +171,44 @@
         </a>
 
         
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Menu Button -->
+        <button class="bar d-flex flex-column d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
+        
         <!--  navigation links,  -->
-      <div class="collapse navbar-collapse justify-content-center pt-2 pt-lg-0 px-2 px-lg-0" id="mainNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav d-none d-lg-flex">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#markets" id="marketsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Markets</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#markets">
+              Markets 
+              <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                <path d="M3.67776 6.81355C4.07544 7.38756 4.92407 7.38756 5.32175 6.81355L8.60853 2.06949C9.06801 1.40629 8.59335 0.5 7.78653 0.5H1.21298C0.406156 0.5 -0.0684982 1.40629 0.390981 2.06949L3.67776 6.81355Z" fill="#222222"/>
+              </svg>
+            </a>
 
-            <ul class="dropdown-menu shadow" aria-labelledby="marketsDropdown">
-              <li><a class="dropdown-item" href="#food-packaging">Food Packaging</a></li>
-              <li><a class="dropdown-item" href="#non-food-packaging">Non-Food Packaging</a></li>
-              <li><a class="dropdown-item" href="#premium-packaging">Premium Packaging</a></li>
+            <ul class="dropdown_ul">
+              <li class="nav-item"><a class="nav-link" href="#food-packaging">Food Packaging</a></li>
+              <li class="nav-item"><a class="nav-link" href="#non-food-packaging">Non-Food Packaging</a></li>
+              <li class="nav-item"><a class="nav-link" href="#premium-packaging">Premium Packaging</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#products" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
-
-            <ul class="dropdown-menu shadow" aria-labelledby="productsDropdown">
-              <li><a class="dropdown-item" href="#shelf-ready-packaging">Shelf Ready Packaging</a></li>
-              <li><a class="dropdown-item" href="#retail-ready-packaging">Retail Ready Packaging</a></li>
-              <li><a class="dropdown-item" href="#e-commerce-packaging">E-commerce Packaging</a></li>
-              <li><a class="dropdown-item" href="#custom-solutions">Custom Solutions</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products
+              <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                <path d="M3.67776 6.81355C4.07544 7.38756 4.92407 7.38756 5.32175 6.81355L8.60853 2.06949C9.06801 1.40629 8.59335 0.5 7.78653 0.5H1.21298C0.406156 0.5 -0.0684982 1.40629 0.390981 2.06949L3.67776 6.81355Z" fill="#222222"/>
+              </svg>
+            </a>
+            
+            <ul class="dropdown_ul">
+              <li class="nav-item"><a class="nav-link" href="#">Shelf Ready Packaging</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Retail Ready Packaging</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">E-commerce Packaging</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Custom Solutions</a></li>
             </ul>
           
           </li>
@@ -65,7 +218,6 @@
           <li class="nav-item"><a class="nav-link" href="#vacancies">Vacancies</a></li>
           <li class="nav-item d-lg-none d-xl-inline-block"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-      </div>
 
         <!-- Contact info -->
         <a href="#contact" class="btn btn-primary d-none d-lg-inline-flex">Contact us</a>

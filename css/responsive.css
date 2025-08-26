@@ -1,0 +1,122 @@
+
+@media (max-width: 767.99px) {
+    /* team */
+    .team__card .card-body h5{
+        font-size: 1rem;
+        margin-bottom: 0 !important;
+    }   
+    .team__card .card-body p{
+        font-size: .85rem;
+    }   
+}
+
+@media (min-width: 768px) {
+    .section-gap-top,
+    .section-gap{
+        padding-top: 8rem;
+    }
+    .section-gap-bottom,
+    .section-gap{
+        padding-bottom: 8rem;
+    }
+
+    /* team */
+    .team__card .card-body {
+        padding: 1.25rem;
+        clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);
+        padding-top: 2.5rem;
+    }   
+    .team__card-bg {
+        clip-path: polygon(0 45%, 100% 1.25rem, 100% 100%, 0% 100%);
+    } 
+}
+
+
+@media (min-width: 992px) {    
+    .container, .container-lg, .container-md, .container-sm{
+        max-width: 990px;
+    }
+    
+    .dropdown .dropdown-menu {
+        margin-top: 0;
+    }
+  
+    .hero__bg {
+        bottom: 3rem;
+    }    
+
+    /* contact */    
+    .form-control {
+        font-size: 1.125rem;
+        padding: 1em;
+    }
+    .contact__box {
+        --bs-card-spacer-x: 3.75rem;
+        --bs-card-spacer-y: 3.75rem;
+    }
+    .contact__info {
+        font-size: 1.5rem;
+    }
+    .contact__info img{
+        width: 2.75rem;
+    }
+    .contact__text {
+        padding: 2.5rem 2rem;
+    }
+
+    /* footer */    
+    footer{
+        --cliped: 10rem;
+        padding-top: 14.375rem;
+    }    
+    .footer__bg{
+        clip-path: polygon(0 var(--cliped), 100% 2.5rem, 100% 100%, 0 100%);
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: calc(var(--container-width) + var(--bs-gutter-x));
+    }
+    h3 {
+        font-size: 1.875rem;  /* 30px */
+    }
+    h1 {
+        font-size: 3.875rem;  /* 62px */
+    }
+    p.fs-2 {
+        font-size: 2rem !important;
+    }
+    
+    .section-gap-top,
+    .section-gap{
+        padding-top: 10rem;
+    }
+    .section-gap-bottom,
+    .section-gap{
+        padding-bottom: 10rem;
+    }
+    
+    .section-gap-sm-top,
+    .section-gap-sm{
+        padding-top: 7.5rem;
+    }
+    .section-gap-sm-bottom,
+    .section-gap-sm{
+        padding-bottom: 7.5rem;
+    }
+
+    /* header */
+    .navbar-nav{
+        --bs-nav-link-font-size: 1.125rem;
+    }
+    .navbar {
+        --bs-navbar-nav-link-padding-x: 1rem;
+    }
+    .projects__slider{
+        padding: 6rem 0;
+    }
+}
+
+
+
