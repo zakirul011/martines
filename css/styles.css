@@ -273,6 +273,26 @@ header {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 84.5%);
 }
 
+/* hero animation */
+.anim-1,
+.anim-2,
+.anim-3,
+.anim-4{
+    transition-duration: 1s;
+    opacity: 0;
+    transform: translateX(5rem);
+}
+.anim-2{transition-delay: .1s;}
+.anim-3{transition-delay: .2s;}
+.anim-4{transition-delay: .3s;}
+.doc-loaded .anim-1,
+.doc-loaded .anim-2,
+.doc-loaded .anim-3,
+.doc-loaded .anim-4{
+    transform: translateX(0rem);    
+    opacity: 1;
+}
+
 
 
 /* Social Links */
@@ -342,14 +362,28 @@ header {
 
 /* Service area */
 .service__card .card-img-bottom{
-    clip-path: polygon(0 7.5rem, 100% 0, 100% 100%, 0 100%);    
-    margin-top: -3.5rem;
+    clip-path: polygon(0 6rem, 100% 0, 100% 100%, 0 100%);    
+    margin-top: -3rem;
+}
+.service__card,
+.service__card .card-img-bottom,
+.service__card .card-img{   
+    transition: .3s ease;
+}
+.service__card:hover{
+    transform: translateY(-.5rem);
 }
 .service__card .card-img{
-    clip-path: polygon(0 6rem, 100% 0, 100% 100%, 0 100%);    
+    clip-path: polygon(0 6rem, 100% 1.5rem, 100% 100%, 0 100%);  
 }
 .service__card .card-img-overlay{
     background-image: linear-gradient(-45deg, var(--primary-color) 0%, transparent 25%);    
+}
+.service__card:hover .card-img {
+    clip-path: polygon(0 0rem, 100% 0, 100% 100%, 0 100%);
+}
+.service__card:hover .card-img-bottom{
+    padding-top: 0 !important;
 }
 
 
@@ -424,6 +458,8 @@ header {
 .team__bg{
     height: 72%;
 }
+
+
 .team__card-bg,
 .team__card {
     transition: .3s ease;

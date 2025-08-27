@@ -1,3 +1,34 @@
+// on load
+window.addEventListener('load', ()=>{
+  document.documentElement.classList.add('doc-loaded')
+  
+  // skrollr js init
+  var s;
+
+  function initOrDestroySkrollr() {
+    if (window.innerWidth <= 768) {
+      if (s) {
+        s.destroy();
+        s = null;
+      }
+    } else {
+      if (!s) {
+        s = skrollr.init({
+          forceHeight: false,
+          smoothScrolling: true,
+          smoothScrollingDuration: 300
+        });
+      }
+    }
+  }
+
+  // Initial check
+  initOrDestroySkrollr();
+
+  // On window resize
+  window.addEventListener('resize', initOrDestroySkrollr);
+  
+})
 
 
 // swiper
