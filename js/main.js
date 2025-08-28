@@ -18,7 +18,7 @@ animationStagger.forEach(w => {
 window.addEventListener('scroll', ()=>{
   animations.forEach(el => {
     let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
-    if (t <= 0) {
+    if (t <= 0 && window.innerWidth >= 768) {
       el.classList.add('animation-added')
     }else{      
       el.classList.remove('animation-added')
