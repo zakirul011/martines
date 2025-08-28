@@ -14,25 +14,27 @@ animationStagger.forEach(w => {
   });
 });
 
+if (window.innerWidth < 768) { // mobile animation disable
 animations.forEach(el =>{
-  if (window.innerWidth < 768) {
       el.classList.add('animation-added')
-    }
-})
+    })
+}else{
+  window.addEventListener('scroll', ()=>{
+    animations.forEach(el => {
+      let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
+      
+        if (t <= 0) {
+          el.classList.add('animation-added')
+        }else{      
+          el.classList.remove('animation-added')
+        }    
+      
+    });
+  })  
+}
 
 
-window.addEventListener('scroll', ()=>{
-  animations.forEach(el => {
-    let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
-    
-    if (t <= 0 && window.innerWidth >= 768) {
-      el.classList.add('animation-added')
-    }else{      
-      el.classList.remove('animation-added')
-    }
-    
-  });
-})
+  
 
 // swiper
 const swiper = new Swiper('.projects__slider', {
