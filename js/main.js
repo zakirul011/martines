@@ -9,29 +9,27 @@ const animationStagger = document.querySelectorAll('.animation-stagger')
 
 animationStagger.forEach(w => {
   let animations = w.querySelectorAll('.animation')
-  animations.forEach((el, index) => {
-    el.style.transitionDelay = (index / 10) + "s"
+  animations.forEach((el, index) => {    
+    if (window.innerWidth < 768) {      
+      el.style.transitionDelay =  "0s"
+    }else{ 
+      el.style.transitionDelay = (index / 10) + "s"
+    }
   });
 });
 
-if (window.innerWidth < 768) { // mobile animation disable
-animations.forEach(el =>{
-      el.classList.add('animation-added')
-    })
-}else{
-  window.addEventListener('scroll', ()=>{
-    animations.forEach(el => {
-      let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
-      
-        if (t <= 0) {
-          el.classList.add('animation-added')
-        }else{      
-          el.classList.remove('animation-added')
-        }    
-      
-    });
-  })  
-}
+
+window.addEventListener('scroll', ()=>{
+  animations.forEach(el => {
+    let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4    
+      if (t <= 0) {
+        el.classList.add('animation-added')
+      }else{      
+        el.classList.remove('animation-added')
+      }    
+    
+  });
+})  
 
 
   
