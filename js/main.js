@@ -1,35 +1,30 @@
 // on load
 window.addEventListener('load', ()=>{
-  document.documentElement.classList.add('doc-loaded')
-  
-  // skrollr js init
-  var s;
-
-  function initOrDestroySkrollr() {
-    if (window.innerWidth <= 768) {
-      if (s) {
-        s.destroy();
-        s = null;
-      }
-    } else {
-      if (!s) {
-        s = skrollr.init({
-          forceHeight: false,
-          smoothScrolling: true,
-          smoothScrollingDuration: 300
-        });
-      }
-    }
-  }
-
-  // Initial check
-  initOrDestroySkrollr();
-
-  // On window resize
-  window.addEventListener('resize', initOrDestroySkrollr);
-  
+  document.documentElement.classList.add('doc-loaded')  
 })
 
+// animation
+const animations = document.querySelectorAll('.animation')
+const animationStagger = document.querySelectorAll('.animation-stagger')
+
+animationStagger.forEach(w => {
+  let animations = w.querySelectorAll('.animation')
+  animations.forEach((el, index) => {
+    el.style.transitionDelay = (index / 10) + "s"
+  });
+});
+
+
+window.addEventListener('scroll', ()=>{
+  animations.forEach(el => {
+    let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
+    if (t <= 0) {
+      el.classList.add('animation-added')
+    }else{      
+      el.classList.remove('animation-added')
+    }
+  });
+})
 
 // swiper
 const swiper = new Swiper('.projects__slider', {

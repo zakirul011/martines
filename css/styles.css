@@ -267,18 +267,31 @@ header {
 .hero__bg {
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
     bottom: 2rem;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .hero__bg-wrapper {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+}
+.doc-loaded .hero__bg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+}
+.doc-loaded .hero__bg-wrapper {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 84.5%);
 }
 
 /* hero animation */
+.hero__bg-wrapper,
+.hero__bg,
 .anim-1,
 .anim-2,
 .anim-3,
 .anim-4{
     transition-duration: 1s;
+}
+.anim-1,
+.anim-2,
+.anim-3,
+.anim-4{
     opacity: 0;
     transform: translateX(5rem);
 }
@@ -522,3 +535,22 @@ footer{
 .footer__logo img {
     width: calc(8rem + 3.5vw);
 }
+
+
+
+/* animation  */
+.animation{
+    transition: 1s ease-out;
+    opacity: 0;    
+}
+.animation-down{
+    transform: translateY(-5rem);
+}
+.animation-up{
+    transform: translateY(5rem);
+}
+.animation.animation-added{
+    transform: translateY(0);
+    opacity: 1;    
+}
+
