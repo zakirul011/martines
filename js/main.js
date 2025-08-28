@@ -14,19 +14,23 @@ animationStagger.forEach(w => {
   });
 });
 
+animations.forEach(el =>{
+  if (window.innerWidth < 768) {
+      el.classList.add('animation-added')
+    }
+})
+
 
 window.addEventListener('scroll', ()=>{
   animations.forEach(el => {
     let t = el.getBoundingClientRect().top - window.innerHeight * 3 / 4
-    if (window.innerWidth >= 768) {
+    
+    if (t <= 0 && window.innerWidth >= 768) {
       el.classList.add('animation-added')
-    }else{
-      if (t <= 0) {
-        el.classList.add('animation-added')
-      }else{      
-        el.classList.remove('animation-added')
-      }
+    }else{      
+      el.classList.remove('animation-added')
     }
+    
   });
 })
 
