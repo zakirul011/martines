@@ -540,7 +540,7 @@ footer{
 
 /* animation  */
 .animation{
-    transition: 1s ease-out;
+    transition: .8s ease-out;
     opacity: 0;    
 }
 .animation-down{
